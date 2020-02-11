@@ -4,19 +4,22 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import prova.Main;
 import prova.TestEsame;
 
 public class TestTestExam {
 
 	String name = "luca";
 	
+	String nameNot = "francesco";
 	int age = 20;
 	
+	TestEsame ext = new TestEsame();
 	
+	//test che verifica l'ESISTENZA del nome "luca" all'interno dell'array
 	@Test
 	public void testExist(){
 		
-		TestEsame ext = new TestEsame();
 		Boolean ver = false;
 
 		if (ext.getUserAge(name) != 0) {
@@ -24,5 +27,30 @@ public class TestTestExam {
 		}
 		assertEquals(true, ver);	
 	}
+	
+	
+	//test che verifica la NON ESISTENZA della stringa "francesco" all'interno dell'array
+	@Test
+	public void testNotExist() {
+		
+		int x = ext.getUserAge(nameNot);
+		
+		assertEquals(0, x);
+		
+	}
+	
+	
+	@Test
+    public void testMain() {
+        String [] args = {};
+        Main.main(args);
+    }
+	
+	@Test
+    public void testErrorMain() {
+		Main a = new Main();
+        String [] args = {};
+        Main.main(args);
+    }
 	
 }

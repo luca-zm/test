@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 public class Main {
 
 	public static void main(String[] args) {
-
+		
 		TestEsame ex = new TestEsame();
 		int age;
 		String name=JOptionPane.showInputDialog("inserire nome utente");
