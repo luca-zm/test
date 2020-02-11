@@ -48,7 +48,7 @@ public class TestTestExam {
 	
 	@Test
     public void testErrorMain() {
-		Main a = new Main();
+		new Main();
         String [] args = {};
         Main.main(args);
     }
